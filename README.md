@@ -4,7 +4,7 @@ Performing analysis on Election data to determine Election Results
 
 ## Overview of Election Audit 
 
-Given an Excel dataspreadsheet with Colorado election results, the purpose of this election audit analysis was to create a Python script that will deliver the following information when the script is run: 1) *Total number of votes cast*, 2) *Complete list of candidates who received votes*, 3) *Total number of votes each candidate recevied*, 4) *Percentage of votes each candidate won*, and 5) *The winner of the election based on popular vote*. The Excel dataspreadsheet included three columns: Ballot ID, County (Jefferson, Denver, & Arapahoe), and Candidate (Charles Casper Stockham, Diana DeGette, & Raymon Anthony Doane)
+Given an Excel dataspreadsheet with Colorado election results, the purpose of this election audit analysis was to create a Python script that will deliver the following information when the script is run: 1) *Total number of votes cast*, 2) *Complete list of candidates who received votes*, 3) *Total number of votes each candidate recevied*, 4) *Percentage of votes each candidate won*, and 5) *The winner of the election based on popular vote*. The Excel dataspreadsheet included three columns: Ballot ID, County (Jefferson, Denver, & Arapahoe), and Candidate (Charles Casper Stockham, Diana DeGette, & Raymon Anthony Doane).
 
 
 ## Election-Audit Results 
@@ -31,4 +31,32 @@ Below is a screenshot of the Election Results (in Visual Studio Code terminal):
 
 ## Election-Audit Summary 
 
-There are 
+The Python script (for this Colorado Election Analysis) --with some modifications-- can be used for any election. The first modification is applied to the coding where you *Add a variable to load a file from a path* & *Add a variable to save the file to a path*:
+
+<sub> *Add a variable to load a file from a path*.
+  
+<sub> file_to_load = os.path.join("Resources/election_results.csv")
+  
+<sub> *Add a variable to save the file to a path*.
+  
+<sub> file_to_save = os.path.join("analysis", "election_results.txt") </sub>
+  
+
+Input the new Election data accordingly in the Visual Studio Code so you are gathering data from the correct data source and having the results be printed in a new .txt file. If given similar data from this Colorado Election Analysis (e.g. Ballot ID, County, Candidate), this script will be able to deliver the same eleciton results from the new data (e.g. total number of votes, total number of votes from each county, total number of votes each candidate received, percentage of votes each candidate won, the winner of the election). 
+  
+If there is additional data provided (e.g. *demographics*) other than *candidate* and *county*, the script can be modified to include the additional variables. Below is an example of the Python Code for *candidate* and *county*. The additional data (based on any new data that you want or need) can be added to the script by using the same format below. 
+  
+<sub> *Candidate Options and candidate votes*.
+  
+<sub> candidate_options = [  ]
+  
+<sub> candidate_votes = {  } 
+
+<sub> *Create a county list and county votes dictionary*.
+  
+<sub> county_options = [  ]
+  
+<sub> county_votes = {  } 
+
+
+
